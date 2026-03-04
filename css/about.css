@@ -1,0 +1,327 @@
+/* 关于页面特定样式 */
+.page-hero {
+    position: relative;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/about-hero.jpg') no-repeat center center/cover;
+    filter: brightness(0.7);
+    z-index: -2;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 125, 50, 0.7), rgba(109, 76, 65, 0.7));
+    z-index: -1;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+/* 关于介绍区域 */
+.about-intro {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    overflow: visible;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.about-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--stone-gray);
+    margin-bottom: 1.5rem;
+}
+
+.signature {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.signature img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* 简历区域 */
+.resume-section {
+    padding: 80px 0;
+    background-color: var(--light-tan);
+}
+
+.resume-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 3rem;
+}
+
+.resume-block {
+    margin-bottom: 40px;
+}
+
+.resume-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.resume-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.resume-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.resume-period {
+    font-weight: 600;
+    color: var(--sage-green);
+    margin-bottom: 5px;
+}
+
+.resume-details h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--soil-brown);
+    margin-bottom: 5px;
+}
+
+.resume-details p {
+    color: var(--stone-gray);
+    margin-bottom: 10px;
+}
+
+.resume-details ul {
+    padding-left: 20px;
+}
+
+.resume-details ul li {
+    color: var(--stone-gray);
+    margin-bottom: 5px;
+}
+
+/* 技能区域 */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: var(--soil-brown);
+    margin-bottom: 8px;
+}
+
+.skill-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-details span {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--pale-green);
+    color: var(--forest-green);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* 下载简历按钮 */
+.download-cv {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background-color: var(--forest-green);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: var(--smooth-transition);
+}
+
+.cv-button:hover {
+    background-color: var(--sage-green);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 设计理念区域 */
+.design-philosophy {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 3rem;
+}
+
+.philosophy-item {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    background-color: var(--light-tan);
+    transition: var(--smooth-transition);
+}
+
+.philosophy-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.philosophy-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--forest-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: var(--smooth-transition);
+}
+
+.philosophy-item:hover .philosophy-icon {
+    background-color: var(--sage-green);
+}
+
+.philosophy-icon i {
+    font-size: 2rem;
+}
+
+.philosophy-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    margin-bottom: 15px;
+}
+
+.philosophy-item p {
+    color: var(--stone-gray);
+    line-height: 1.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .resume-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .philosophy-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-details {
+        justify-content: center;
+    }
+}
