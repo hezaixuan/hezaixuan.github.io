@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateHeader() {
         const header = document.querySelector('.header');
         if (window.scrollY > 100) {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            header.style.backgroundColor = 'rgba(247, 244, 238, 0.96)';
+            header.style.boxShadow = '0 4px 14px rgba(74, 70, 63, 0.08)';
         } else {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+            header.style.backgroundColor = '';
             header.style.boxShadow = 'none';
         }
         ticking = false;
