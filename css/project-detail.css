@@ -1,11 +1,13 @@
 /* 项目详情页样式 */
 .project-hero {
     position: relative;
-    height: 60vh;
-    min-height: 400px;
-    max-height: 600px;
+    height: 58vh;
+    min-height: 420px;
+    max-height: 620px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     overflow: hidden;
 }
 
@@ -31,59 +33,77 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(180deg, rgba(38, 54, 42, 0.72) 0%, rgba(38, 54, 42, 0.62) 100%);
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
     width: 100%;
-    padding-bottom: 2rem;
+}
+
+.hero-content .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .project-breadcrumb {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .project-breadcrumb a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
     transition: var(--smooth-transition);
 }
 
 .project-breadcrumb a:hover {
-    color: white;
+    color: #fff;
 }
 
-.project-title {
+.project-hero .project-title {
+    font-family: var(--font-serif);
     font-size: 3rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #fff;
+    margin-bottom: 0.9rem;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-subtitle {
+    font-size: 1.02rem;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 1.6rem;
 }
 
 .project-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center;
+    gap: 14px;
 }
 
 .project-meta span {
     display: inline-block;
-    padding: 5px 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: white;
+    padding: 7px 22px;
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 30px;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
+    color: #fff;
 }
 
 /* 项目概述 */
 .project-overview {
     padding: 80px 0;
-    background-color: white;
+    background-color: var(--light-tan);
 }
 
 .overview-content {
@@ -92,19 +112,23 @@
     gap: 50px;
 }
 
+.overview-text > .section-title {
+    margin-bottom: 2.6rem;
+}
+
 .concept-highlight {
-    background-color: var(--light-tan);
-    border-left: 4px solid var(--forest-green);
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 0 8px 8px 0;
+    border-left: 3px solid var(--forest-green);
+    padding: 4px 0 4px 22px;
+    margin: 0 0 1.8rem;
 }
 
 .concept-highlight h3 {
-    color: var(--forest-green);
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+    font-family: var(--font-serif);
+    color: var(--earth-brown);
+    font-size: 1.35rem;
     font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 .overview-text p {
@@ -1098,17 +1122,14 @@
 /* 项目1优化样式 */
 /* 概念高亮样式更新 */
 .concept-box {
-    background-color: rgba(46, 125, 50, 0.08);
-    border-radius: 8px;
-    padding: 15px 20px;
-    margin-top: 10px;
-    border-left: 3px solid var(--forest-green);
+    padding: 0;
+    margin: 6px 0 0;
 }
 
 .concept-box p {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--forest-green);
+    font-size: 1.02rem;
+    font-weight: 400;
+    color: var(--text-main);
     margin: 0;
 }
 
@@ -1377,4 +1398,128 @@
     line-height: 1.5;
     color: var(--stone-gray);
     margin: 0;
+}
+
+/* ===== 统一图标徽章与补全网格（改版） ===== */
+.feature-icon,
+.module-icon,
+.strategy-icon,
+.experience-icon,
+.module-icon-sm {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(63, 90, 68, 0.08);
+    border-radius: 50%;
+    color: var(--forest-green);
+    font-size: 1.65rem;
+}
+
+.feature-icon i,
+.module-icon i,
+.strategy-icon i,
+.experience-icon i,
+.module-icon-sm i {
+    line-height: 1;
+}
+
+.module-icon-sm {
+    width: 54px;
+    height: 54px;
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+}
+
+/* 三卡网格统一补成四块（2x2） */
+.key-features,
+.framework-modules,
+.strategy-items,
+.experience-modules {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.framework-module {
+    background-color: #fff;
+}
+
+.strategy-item {
+    text-align: center;
+}
+
+.strategy-item h4,
+.strategy-item p {
+    text-align: center;
+}
+
+/* 核心板块卡片化重设计 */
+.core-modules {
+    margin-top: 2.5rem;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.module-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.6rem 1.4rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.module-item h4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--forest-green);
+    margin-bottom: 0.8rem;
+}
+
+.module-item ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.module-item li {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--stone-gray);
+    padding-left: 1.1rem;
+    position: relative;
+    margin-bottom: 0.35rem;
+}
+
+.module-item li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--earth-brown);
+}
+
+@media (max-width: 768px) {
+    .key-features,
+    .framework-modules,
+    .strategy-items,
+    .experience-modules,
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
 }
